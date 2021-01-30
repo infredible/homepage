@@ -53,7 +53,7 @@
             // The menu links
             this.DOM.menuLinks = [...this.DOM.menu.querySelectorAll('.menu__link')];
             // Mouse position
-            this.mousePos = {x: winsize.width*2, y: winsize.height*2};
+            this.mousePos = {x: winsize.width, y: winsize.height};
             // Last mouse positions (one to consider for the image translation movement, another for the scale value of the feDisplacementMap element)
             this.lastMousePos = {
                 translation: {x: 0, y: 0},

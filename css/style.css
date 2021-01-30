@@ -84,6 +84,20 @@ p {
   margin-bottom: 3em;
 }
 
+.hero {
+  position: fixed;
+  top: calc(50% - 500px/2);
+  left: calc(50% - 500px/2);
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+}
+
+.hero img {
+  width: 500px;
+  height: 500px;
+}
+
 
   /* Buttons
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
