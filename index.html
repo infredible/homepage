@@ -18,6 +18,7 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/distort.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 
@@ -32,26 +33,43 @@
   <!-- Add your site or application content here -->
 
   <div class="content">
+
+    <svg class="distort" width="350" height="450" viewBox="0 0 350 450">
+      <filter id="distortionFilter">
+        <feTurbulence type="turbulence" baseFrequency="0.01 0.01" numOctaves="8" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="noise"/>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse"/>
+      </filter>
+      <g filter="url(#distortionFilter)">
+        <image class="distort__img" x="50" y="50" xlink:href="img/1.jpg" height="350" width="250"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/2.jpg" height="350" width="250"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/3.jpg" height="350" width="250"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/4.jpg" height="350" width="250"/>
+      </g>
+    </svg>
+
+
     <div class="header">
       <h1>Fred’s a product design generalist located in Oakland, CA. Currently
         leading mobile design at Matterport.</h1>
     </div>
 
     <div class="links">
-      <ul>
-        <li><h1><a href="https://www.notion.so/3e7e5c2319de4084bbb0873ee87f6af1?v=91a31497c9b04c55b1749971bf4eb804">Work</a></h1></li>
-        <li><h1><a href="https://www.notion.so/About-Me-d0ce94a52fe74f26b30165fcbabc80d5">About</a></h1></li>
-        <li><h1><a href="https://www.linkedin.com/in/fredzaw/">LinkedIn</a></h1></li>
-        <li><h1><a href="https://twitter.com/fredzaw">Twitter</a></h1></li>
-        <li><h1><a href="mailto:fred.zaw@gmail.com">Email</a></h1></li>
-      </ul>
+      <nav class="menu">
+        <ul>
+          <li><h1><a class="menu__link" href="https://www.notion.so/3e7e5c2319de4084bbb0873ee87f6af1?v=91a31497c9b04c55b1749971bf4eb804">Work</a></h1></li>
+          <li><h1><a class="menu__link" href="https://www.notion.so/About-Me-d0ce94a52fe74f26b30165fcbabc80d5">About</a></h1></li>
+          <li><h1><a class="menu__link" href="https://www.linkedin.com/in/fredzaw/">LinkedIn</a></h1></li>
+          <li><h1><a class="menu__link" href="https://twitter.com/fredzaw">Twitter</a></h1></li>
+          <li><h1><a href="mailto:fred.zaw@gmail.com">Email</a></h1></li>
+        </ul>
+      </nav>
     </div>
   </div>
 
 
-
-  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/charming.min.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/demo.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -59,7 +77,7 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
-  <script src="js/demo.js"></script>
+
 </body>
 
 </html>

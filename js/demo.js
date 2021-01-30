@@ -53,10 +53,10 @@
             // The menu links
             this.DOM.menuLinks = [...this.DOM.menu.querySelectorAll('.menu__link')];
             // Mouse position
-            this.mousePos = {x: winsize.width/2, y: winsize.height/2};
+            this.mousePos = {x: winsize.width*2, y: winsize.height*2};
             // Last mouse positions (one to consider for the image translation movement, another for the scale value of the feDisplacementMap element)
             this.lastMousePos = {
-                translation: {x: winsize.width/2, y: winsize.height/2},
+                translation: {x: 0, y: 0},
                 displacement: {x: 0, y: 0}
             };
             // feDisplacementMap scale value
@@ -120,15 +120,15 @@
         }
         render() {
             // Translate the image on mousemove
-            this.lastMousePos.translation.x = lerp(this.lastMousePos.translation.x, this.mousePos.x, 0.2);
-            this.lastMousePos.translation.y = lerp(this.lastMousePos.translation.y, this.mousePos.y, 0.2);
-            this.DOM.svg.style.transform = `translateX(${(this.lastMousePos.translation.x-winsize.width/2)}px) translateY(${this.lastMousePos.translation.y-winsize.height/2}px)`;
+            this.lastMousePos.translation.x = lerp(this.lastMousePos.translation.x, this.mousePos.x, 0.15);
+            this.lastMousePos.translation.y = lerp(this.lastMousePos.translation.y, this.mousePos.y, 0.15);
+            this.DOM.svg.style.transform = `translateX(${(this.lastMousePos.translation.x)}px) translateY(${this.lastMousePos.translation.y-winsize.height/4}px)`;
 
             // Scale goes from 0 to 50 for mouseDistance values between 0 to 140
-            this.lastMousePos.displacement.x = lerp(this.lastMousePos.displacement.x, this.mousePos.x, 0.1);
-            this.lastMousePos.displacement.y = lerp(this.lastMousePos.displacement.y, this.mousePos.y, 0.1);
+            this.lastMousePos.displacement.x = lerp(this.lastMousePos.displacement.x, this.mousePos.x, 0.07);
+            this.lastMousePos.displacement.y = lerp(this.lastMousePos.displacement.y, this.mousePos.y, 0.07);
             const mouseDistance = distance(this.lastMousePos.displacement.x, this.mousePos.x, this.lastMousePos.displacement.y, this.mousePos.y);
-            this.dmScale = Math.min(lineEq(50, 0, 140, 0, mouseDistance), 50);
+            this.dmScale = Math.min(lineEq(50, 0, 110, 0, mouseDistance), 50);
             feDisplacementMapEl.scale.baseVal = this.dmScale;
 
             requestAnimationFrame(() => this.render());

@@ -1,0 +1,13 @@
+.distort {
+	position: absolute;
+	pointer-events: none;
+	will-change: transform;
+}
+
+.distort__img {
+	opacity: 0;
+}
+
+.menu, a, .menu__link{
+  z-index: 999;
+}
