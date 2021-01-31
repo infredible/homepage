@@ -2,6 +2,7 @@
 	position: absolute;
 	pointer-events: none;
 	will-change: transform;
+  z-index: -1;
 }
 
 .distort__img {
