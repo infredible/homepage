@@ -58,9 +58,14 @@ p {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
     color: #E342C6;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+  }
   a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #F0A4F1; }
 
 
