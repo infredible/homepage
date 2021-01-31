@@ -3,12 +3,19 @@
 	pointer-events: none;
 	will-change: transform;
   z-index: -1;
+  display: none;
 }
 
 .distort__img {
 	opacity: 0;
 }
-
 .menu, a, .menu__link{
   z-index: 999;
+}
+
+
+@media (min-width: 550px) {
+  .distort {
+    display: block;
+  }
 }
