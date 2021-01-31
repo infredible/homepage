@@ -22,7 +22,7 @@ body {
   font-family: "Inter", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1F5492;
   background-color: #FCD0E6;
-  overflow-x: hidden; //horizontal
+  overflow-x: hidden;
 
 }
 
@@ -69,15 +69,30 @@ p {
 .content {
   max-width: 1400px;
   padding: 0.5em;
-  margin: 2em 1em;
+  margin: 1em 1em;
 }
 
 @media (min-width: 550px) {
   .content {
     max-width: 1400px;
     padding: 1em;
-    margin: 2em 2em;
+    margin: 1em 2em;
   }
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.nav li {
+  padding-right: 1rem;
+}
+
+.nav ul > li {
+  display: inline-block;
+  margin: 0;
 }
 
 .header {
