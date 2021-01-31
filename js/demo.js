@@ -72,9 +72,6 @@
             window.addEventListener('mousemove', ev => this.mousePos = getMousePos(ev));
 
             this.DOM.menuLinks.forEach((item, pos) => {
-                // Create spans for each letter
-                charming(item);
-                const letters = [...item.querySelectorAll('span')];
 
                 const mouseenterFn = () => {
                     // Hide the previous menu image.
@@ -93,21 +90,6 @@
                         TweenMax.set(this.DOM.imgs[this.current], {opacity: 1});
                     }
 
-                    // Letters effect
-                    TweenMax.staggerTo(letters, 0.2, {
-                        ease: Sine.easeInOut,
-                        y: this.lastMousePos.translation.y < this.mousePos.y ? 30 : -30,
-                        startAt: {opacity: 1, y: 0},
-                        opacity: 0,
-                        yoyo: true,
-                        yoyoEase: Back.easeOut,
-                        repeat: 1,
-                        stagger: {
-                            grid: [1,letters.length-1],
-                            from: 'center',
-                            amount: 0.12
-                        }
-                    });
                 };
                 item.addEventListener('mouseenter', mouseenterFn);
             });
