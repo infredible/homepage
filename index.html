@@ -47,16 +47,17 @@
       <img src="img/me.png" alt="Fred's face">
     </div>
 
-    <svg class="distort" width="350" height="450" viewBox="0 0 350 450">
+    <svg class="distort" width="800" height="600" viewBox="0 0 800 600">
       <filter id="distortionFilter">
         <feTurbulence type="turbulence" baseFrequency="0.01 0.01" numOctaves="8" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="noise"/>
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse"/>
       </filter>
       <g filter="url(#distortionFilter)">
-        <image class="distort__img" x="50" y="50" xlink:href="img/1.jpg" height="350" width="250"/>
-        <image class="distort__img" x="50" y="50" xlink:href="img/2.jpg" height="350" width="250"/>
-        <image class="distort__img" x="50" y="50" xlink:href="img/3.jpg" height="350" width="250"/>
-        <image class="distort__img" x="50" y="50" xlink:href="img/4.jpg" height="350" width="250"/>
+        <image class="distort__img" x="0" y="0" xlink:href="img/1.jpg" height="800" width="600"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/ebay-passions-hero.gif" height="800" width="600"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/3.gif" height="800" width="600"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/4.jpg" height="800" width="600"/>
+        <image class="distort__img" x="50" y="50" xlink:href="img/5.jpg" height="800" width="600"/>
       </g>
     </svg>
 
@@ -69,12 +70,11 @@
     <div class="projects">
       <nav class="menu">
         <ul>
-          <li><a class="menu__link" href="#">Matterport</a></li>
-          <li><a class="menu__link" href="#">Ebay Passions</a></li>
-          <li><a class="menu__link" href="#">Ebay China</a></li>
-          <li><a class="menu__link" href="#">Sense</a></li>
-          <li><a class="menu__link" href="#">Matternet Terminal</a></li>
-          <li><a class="menu__link" href="#">Field of Balloons</a></li>
+          <li><a class="menu__link" href="https://www.notion.so/Matterport-86d13421acf9495fb9dd0e6679771b4a">Matterport</a></li>
+          <li><a class="menu__link" href="https://www.notion.so/Ebay-Passions-79c8d9a4a589416c88ee721a931a75bd">Ebay Passions</a></li>
+          <li><a class="menu__link" href="https://www.notion.so/Ebay-China-3dc8bc662686409b9f6ede77eeaaba22">Ebay China</a></li>
+          <li><a class="menu__link" href="https://www.notion.so/Matternet-24dc1d6086ce4e7d97aedb4f8470a54c">Matternet Terminal</a></li>
+          <li><a class="menu__link" href="https://www.notion.so/Field-of-Balloons-463de6f7cc4641d98d823a3e63ab8741">Field of Balloons</a></li>
         </ul>
       </nav>
     </div>
